@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
 
 body {
-	font-family: 'Noto Sans TC', sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 
 	background-color: #5e747f;
+	background-image: url("./assets/flag.svg");
+	background-position: -500px 0;
+	background-repeat: repeat-x;
+	background-size: 400px;
+
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+}
+
+header {
+	margin-top: 13em;
 }
 
 h1 {
@@ -106,7 +114,6 @@ div.cardpanel {
 	border-radius: 0;
 	border-bottom-left-radius: inherit;
 	border-bottom-right-radius: inherit;
-	
 }
 
 .card > .info > .clickable {
@@ -137,5 +144,11 @@ div.cardpanel {
 @media (max-width: 650px) {
 	main {
 		width: 90%;
+	}
+}
+
+@media (max-width: 1550px) {
+	main {
+		width: 85%;
 	}
 }

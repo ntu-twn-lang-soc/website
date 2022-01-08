@@ -1,0 +1,105 @@
+{
+    "id": 101362417,
+    "svid": "ND12k",
+    "title": "你是國語運動中的誰？",
+    "status": "FINISH",
+    "submitTime": "2022-01-07 16:36:37",
+    "mbunq": null,
+    "meta": { "isolated": { "status": false, "type": null } },
+    "mbrid": null,
+    "alias": [],
+    "result": [{
+            "subject": "上學時，校長告訴全校不能說台語",
+            "type": "CHOICEONE",
+            "sn": 0,
+            "label": "",
+            "alias": "",
+            "answer": ["怕被發錢掛狗牌，只好硬著頭皮說國語"],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        },
+        {
+            "subject": "在學校公佈欄上看到國語演說比賽的訊息",
+            "type": "CHOICEONE",
+            "sn": 2,
+            "label": "",
+            "alias": "",
+            "answer": ["好想有參加比賽的表現機會，努力請老師指導自己標準的國語發音"],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        },
+        {
+            "subject": "在家裡聽到父母講一口不標準的「台灣國語」",
+            "type": "CHOICEONE",
+            "sn": 4,
+            "label": "",
+            "alias": "",
+            "answer": ["嘲笑他們的發音"],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        },
+        {
+            "subject": "雲州大儒俠受國民黨文化工作會施壓而停播",
+            "type": "CHOICEONE",
+            "sn": 5,
+            "label": "",
+            "alias": "",
+            "answer": ["官方做的決定老百姓無法干涉，而且還有其他節目所以無所謂"],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        },
+        {
+            "subject": "台語電影受打壓驟減，戲院裡都看不到台語片了",
+            "type": "CHOICEONE",
+            "sn": 6,
+            "label": "",
+            "alias": "",
+            "answer": ["國語片是彩色的，比黑白的台語片更好看！是不是台語有關係嗎？"],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        },
+        {
+            "subject": "到公務機關辦理業務，看到辦事員被主管要求說國語卻說不標準，自己也聽不太懂對方在說什麼",
+            "type": "CHOICEONE",
+            "sn": 7,
+            "label": "",
+            "alias": "",
+            "answer": [
+                "既然規定是這樣就盡量配合吧，而且說國語已經是大時代趨勢，到時自己如果一句都不會講，事情辦不成也很麻煩"
+            ],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        },
+        {
+            "subject": "還我母語運動",
+            "type": "CHOICEONE",
+            "sn": 8,
+            "label": "",
+            "alias": "",
+            "answer": ["我也不會說客家話，人家倡議不關我的事"],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        },
+        {
+            "subject": "看到新課綱審議的新聞，發現國中、高中將增加兩學分的本土語言必修課",
+            "type": "CHOICEONE",
+            "sn": 9,
+            "label": "",
+            "alias": "",
+            "answer": [
+                "升學考試既然不會考，為什麼要在學校上台語課？應該把有限的寶貴時間讓給考科，本土語言在家學即可"
+            ],
+            "otherAnswer": [],
+            "answerLabel": [""],
+            "answerAlias": [""]
+        }
+    ],
+    "variables": []
+}

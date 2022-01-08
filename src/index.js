@@ -1,6 +1,8 @@
 import Mustache from "mustache";
+import CryptoJS from "crypto-es";
+import { fetch } from "whatwg-fetch";
 import { getDetails } from "./questionsUtils";
-import {registerEventListener} from "./eventListeners";
+import { registerEventListener } from "./eventListeners";
 
 const urlParams = new URLSearchParams(window.location.search);
 const SVID = urlParams.get("svid");
@@ -49,5 +51,4 @@ let renderTemplate = () => {
 	});
 	main.innerHTML = rendered;
 	registerEventListener();
-
 };

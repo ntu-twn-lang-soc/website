@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+body {
+	font-family: 'Noto Sans TC', sans-serif;
+
+	background-color: #5e747f;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	color: #fff;
+}
+
+main {
+	width: 60%;
+	padding: 2em;
+	color: #333;
+}
+
+section {
+	background-color: #f6f6f6;
+	border-radius: 15px;
+	padding: 2em;
+	margin: 2em 0;
+}
+
+section.center {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+section p {
+	line-height: 1.3em;
+}
+
+/* Button */
+
+a.button {
+	display: inline-block;
+	background-color: rgb(240, 219, 161);
+	line-height: 3em;
+	min-width: 10em;
+	border-radius: 10px;
+
+	font-weight: 700;
+	font-size: 1.3em;
+	text-decoration: none;
+	text-align: center;
+	color: inherit;
+}
+
+/* Cards */
+
+div.cardpanel {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 16em);
+	justify-content: center;
+	grid-gap: 3em;
+}
+
+.card {
+	background-color: #e7e7e7;
+	border-radius: 15px;
+
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: space-between; */
+	padding: 0em;
+}
+
+.card > div {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px;
+
+	line-height: 1.3em;
+}
+
+.card > .score {
+	text-align: center;
+	font-size: 2em;
+}
+
+.card > .subject {
+	background-color: rgb(240, 219, 161);
+	border-top-right-radius: inherit;
+	border-top-left-radius: inherit;
+	font-weight: bold;
+}
+
+.card > .answer,
+.card > .score {
+	flex-grow: 1;
+}
+
+.card > .info {
+	display: inline-block;
+	justify-self: flex-end;
+	color: white;
+	background-color: #809cbb;
+	border-radius: 0;
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+	
+}
+
+.card > .info > .clickable {
+	font-weight: 800;
+	text-decoration: underline dashed;
+	cursor: pointer;
+}
+
+.card > .info > .detail {
+	display: block;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	line-height: 1.5em;
+
+	padding-top: 0.8em;
+
+	max-height: 20em;
+	transition: all 0.3s linear;
+
+	overflow: hidden;
+}
+
+.card > .info > .detail.hide {
+	padding: 0;
+	max-height: 0;
+}
+
+@media (max-width: 650px) {
+	main {
+		width: 90%;
+	}
+}

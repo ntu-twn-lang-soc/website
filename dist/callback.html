@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>你是國語運動中的誰？ | 台灣語言與社會</title>
+	</head>
+
+	<body>
+		<main id="main">
+			<h1>你是國語運動中的誰？</h1>
+
+			<section id="profile">
+				<h2>以華語為慣用語的主流台灣人</h2>
+
+				<p>
+					你很幸運地成為當今台灣社會的主流，儘管母語並非華語，但仍然透過學校教育和大眾傳播媒體習得一定的操作能力，並以台灣華語為生活的慣用語，台語幾乎只有在和長輩溝通時才使用。你的語言能力不僅助您在工商社會中取得經濟優勢，也幫助您在商業、政治等正式場域中取得優勢。
+				</p>
+				<div class="cardpanel">
+					<div class="card">
+						<div class="subject">台語能力</div>
+						<div class="score">50%</div>
+					</div>
+					<div class="card">
+						<div class="subject">國語能力</div>
+						<div class="score">50%</div>
+					</div>
+					<div class="card">
+						<div class="subject">行動能力</div>
+						<div class="score">50%</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="questions">
+				<div class="cardpanel">
+					{{#questions}}
+					<div class="block card">
+						<div class="subject">{{subject}}</div>
+						<div class="answer">{{answer}}</div>
+						<div class="info">
+							<span class="clickable">
+								發生什麼事？
+							</span>
+							<span class="detail hide">
+								{{detail}}
+							</span>
+						</div>
+					</div>
+					{{/questions}}
+				</div>
+
+				<p></p>
+			</section>
+
+			<section class="center">
+				<a href="./index.html" class="button">
+                    從頭來過
+                </a>
+				<a href="" class="button">
+                    分享結果
+                </a>
+			</section>
+
+			<section id="credits">
+				<p>2021 秋季 臺灣語言與社會 期末呈現</p>
+			</section>
+		</main>
+
+		<!-- IE 11 promise and fetch pollyfill -->
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.2/fetch.min.js"></script>
+
+		<!-- crypto-js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/cipher-core-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+		<!-- Custom JS -->
+		<script src="./bundle.js" type="module"></script>
+	</body>
+</html>

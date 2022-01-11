@@ -19,23 +19,16 @@
 			</header>
 
 			<section id="profile">
-				<h2>以華語為慣用語的主流台灣人</h2>
-
-				<p>
-					你很幸運地成為當今台灣社會的主流，儘管母語並非華語，但仍然透過學校教育和大眾傳播媒體習得一定的操作能力，並以台灣華語為生活的慣用語，台語幾乎只有在和長輩溝通時才使用。你的語言能力不僅助您在工商社會中取得經濟優勢，也幫助您在商業、政治等正式場域中取得優勢。
-				</p>
+				<h2>你是……{{role.roleName}}</h2>
+				<p>{{role.roleDescription}}</p>
 				<div class="cardpanel">
 					<div class="card">
-						<div class="subject">台語能力</div>
-						<div class="score">50%</div>
+						<div class="subject">本土語言能力</div>
+						<div class="score">{{score.lang}}<span class="denominator">/10</span></div>
 					</div>
 					<div class="card">
-						<div class="subject">國語能力</div>
-						<div class="score">50%</div>
-					</div>
-					<div class="card">
-						<div class="subject">行動能力</div>
-						<div class="score">50%</div>
+						<div class="subject">反抗行動能力</div>
+						<div class="score">{{score.action}}<span class="denominator">/7</span></div>
 					</div>
 				</div>
 			</section>

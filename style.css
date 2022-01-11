@@ -42,7 +42,7 @@ section.center {
 }
 
 section p {
-	line-height: 1.3em;
+	line-height: 1.7em;
 }
 
 /* Button */
@@ -94,11 +94,18 @@ div.cardpanel {
 	font-size: 2em;
 }
 
+.card > .score > .denominator {
+	font-size: 0.4em;
+}
+
 .card > .subject {
 	background-color: rgb(240, 219, 161);
 	border-top-right-radius: inherit;
 	border-top-left-radius: inherit;
-	font-weight: bold;
+	
+	text-align: justify;
+	font-size: 0.9em;
+	font-weight: 400;
 }
 
 .card > .answer,
@@ -124,13 +131,14 @@ div.cardpanel {
 
 .card > .info > .detail {
 	display: block;
+	font-size: 0.85em;
 	text-align: justify;
 	text-justify: inter-ideograph;
 	line-height: 1.5em;
 
 	padding-top: 0.8em;
 
-	max-height: 20em;
+	max-height: 25em;
 	transition: all 0.3s linear;
 
 	overflow: hidden;

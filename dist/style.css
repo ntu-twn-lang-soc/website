@@ -46,12 +46,15 @@ section.center {
 /* Button & Links */
 
 a {
-	color: #466486;
+	color: #809cbb;
 }
 
 a.button {
 	display: inline-block;
-	background-color: rgb(240, 219, 161);
+
+	margin: 0.5em 0;
+
+	background-color: #809cbb;
 	line-height: 3em;
 	min-width: 10em;
 	border-radius: 10px;
@@ -60,7 +63,7 @@ a.button {
 	font-size: 1.3em;
 	text-decoration: none;
 	text-align: center;
-	color: inherit;
+	color: #FFF;
 }
 
 /* Cards */
@@ -133,10 +136,10 @@ div.cardpanel {
 
 .card > .info > .detail {
 	display: block;
-	font-size: 0.85em;
+	font-size: 0.9em;
 	text-align: justify;
 	text-justify: inter-ideograph;
-	line-height: 1.5em;
+	line-height: 1.6em;
 
 	padding-top: 0.8em;
 
@@ -149,6 +152,14 @@ div.cardpanel {
 .card > .info > .detail.hide {
 	padding: 0;
 	max-height: 0;
+}
+
+.card > .info > .clickable::after {
+	content: "↑";
+}
+
+.card > .info > .clickable.toShow::after {
+	content: "↓";
 }
 
 @media (max-width: 650px) {

@@ -8,15 +8,12 @@ const urlParams = new URLSearchParams(window.location.search);
 const SVID = urlParams.get("svid");
 const HASH = urlParams.get("hash");
 
-// ?svid=ND12k&hash=10ce118b9e681040775d67d7a2748f46
-
 const key = "60a77699fb3f5040";
 const iv = "3de6a3000e65827d";
 
 let svcontent;
 let questions = [];
-let score = [0, 0]; //[本土語言, 行動傾向]
-let role;
+let score = [0, 0, 0]; //[本土語言, 行動傾向, 特殊結局]
 
 fetch(`https://www.surveycake.com/webhook/v0/${SVID}/${HASH}`)
 	.then((res) => res.text())
@@ -35,6 +32,8 @@ fetch(`https://www.surveycake.com/webhook/v0/${SVID}/${HASH}`)
 
 		svcontent = JSON.parse(decrypted.toString(CryptoJS.enc.Utf8));
 
+		console.log(svcontent)
+
 		svcontent["result"].forEach((quiz) => {
 			if (quiz.answer.length != 0) {
 				questions.push({
@@ -45,7 +44,7 @@ fetch(`https://www.surveycake.com/webhook/v0/${SVID}/${HASH}`)
 
 				let resScore = quiz.answerLabel[0].split(",").map((ele) => {return parseInt(ele)});
 
-				for (let i = 0; i < score.length; i++) {
+				for (let i = 0; i < resScore.length; i++) {
 					score[i] = score[i] + resScore[i]
 				};
 			}

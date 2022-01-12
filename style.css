@@ -56,13 +56,17 @@ section {
 	padding: 2em;
 	margin: 2em 0;
 	line-height: 1.7em;
-
 }
 
 section.center {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	flex-wrap: wrap;
+}
+
+p.intro {
+	max-width: 50%;
 }
 
 /* Button & Links */
@@ -77,8 +81,8 @@ a.button {
 	margin: 0.5em 0;
 
 	background-color: #809cbb;
-	line-height: 3em;
-	min-width: 10em;
+	line-height: 4em;
+	min-width: 12em;
 	border-radius: 10px;
 
 	font-weight: 700;
@@ -198,6 +202,9 @@ div.cardpanel {
 @media (max-width: 650px) {
 	main {
 		width: 90%;
+	}
+	p.intro {
+		max-width: 80%;
 	}
 }
 

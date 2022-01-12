@@ -33,6 +33,8 @@ section {
 	border-radius: 15px;
 	padding: 2em;
 	margin: 2em 0;
+	line-height: 1.7em;
+
 }
 
 section.center {
@@ -41,11 +43,11 @@ section.center {
 	flex-wrap: wrap;
 }
 
-section p {
-	line-height: 1.7em;
-}
+/* Button & Links */
 
-/* Button */
+a {
+	color: #466486;
+}
 
 a.button {
 	display: inline-block;

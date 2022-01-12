@@ -6754,9 +6754,14 @@
   		info: "1988 年 12 月，還我客家話運動走上街頭抗議《廣播電視法》對方言節目處處限制，要求「語言解嚴」，訴求電視台製播客語節目，重建多元化、開放的新語言政策。見綠色小組現場記錄：https://www.facebook.com/watch/?v=325130401661193"
   	},
   	{
+  		subject: "課堂作業要求把家裡最常見的場景不限形式記錄下來，你決定紀錄下父母用台語聊天的情形",
+  		sn: 13,
+  		info: ""
+  	},
+  	{
   		subject: "台語文學",
   		sn: 11,
-  		info: ""
+  		info: "台文作家鄭順聰過去使用中文寫作，但總覺得筆下人物的對話少了點味道，曾在專訪提及：「尤其是海邊那些漁民，很多連華語都不會講，所以我在寫他們的故事的時候，我用華語來寫就覺得很痛苦，因為它明明就可以這樣（用台語）講。身為一個作家應該忠實地紀錄，何況我又是一個寫文學的，我希望很道地的、很漂亮的把它寫出來。」便走上母語書寫之路。"
   	},
   	{
   		subject: "國家語言發展法",
@@ -6785,6 +6790,10 @@
   	{
   		title: "日常生活慣用華語，但對本土語言提倡富有熱忱的台灣人",
   		description: "您對成長過中失語的過程一直感受到強烈的剝奪感，但礙於大環境的強制規範而為華語使用者。隨年齡增長，對語言有更多認識與體認後，決定開始主動爭取應有的權利，投身於母語運動，希望政府和社會能對保存本土語言有更強烈的意識與積極作為，也開始重新學習自身的母語，撿回原本屬於自己的寶藏，希望根本語言能真正地活在生活中，也期盼下一代能不用再經歷失去根源的哀傷。"
+  	},
+  	{
+  		title: "以母語寫作的臺文作家",
+  		description: "您熱愛寫作，也在成長過程中充分訓練了自己的寫作能力，能夠捕捉生活中的點點滴滴並轉化為文字。並且您注意到了台灣寫作界獨尊華語的現象，而華語卻無法完美表達出台語的魅力與精髓，所以認為必須有人將本土語言用文字記錄下來和推廣。您出版了數本以台文寫成的小說和主持全台語廣播節目，提倡台語現代化、藝術化及學術化以在台語保存上走得更長更遠。\n參考：台文作家鄭順聰，出版作品《大士爺厚火氣》、《仙化伯的烏金人生》、《台語好日子：學台語的第一本書》等。"
   	}
   ];
   var questionsData = {
@@ -6802,20 +6811,25 @@
 
   let getRole = score => {
     let role;
+    console.log(score);
 
-    if (score[0] >= 6) {
-      //本土語言者
-      if (score[1] >= 3) {
-        //行動者
-        role = questionsData.roles[1];
-      } else {
-        role = questionsData.roles[0];
-      }
+    if (score[2] == 5) {
+      role = questionsData.roles[4];
     } else {
-      if (score[1] >= 3) {
-        role = questionsData.roles[3];
+      if (score[0] >= 6) {
+        //本土語言者
+        if (score[1] >= 3) {
+          //行動者
+          role = questionsData.roles[1];
+        } else {
+          role = questionsData.roles[0];
+        }
       } else {
-        role = questionsData.roles[2];
+        if (score[1] >= 3) {
+          role = questionsData.roles[3];
+        } else {
+          role = questionsData.roles[2];
+        }
       }
     }
 
@@ -6837,13 +6851,13 @@
 
   const urlParams = new URLSearchParams(window.location.search);
   const SVID = urlParams.get("svid");
-  const HASH = urlParams.get("hash"); // ?svid=ND12k&hash=10ce118b9e681040775d67d7a2748f46
-
+  const HASH = urlParams.get("hash");
   const key = "60a77699fb3f5040";
   const iv = "3de6a3000e65827d";
   let svcontent;
   let questions = [];
-  let score = [0, 0]; //[本土語言, 行動傾向]
+  let score = [0, 0, 0]; //[本土語言, 行動傾向, 特殊結局]
+
   fetch(`https://www.surveycake.com/webhook/v0/${SVID}/${HASH}`).then(res => res.text()).then(res => {
     const cipherParams = CryptoJS.lib.CipherParams.create({
       ciphertext: CryptoJS.enc.Base64.parse(res)
@@ -6852,6 +6866,7 @@
       iv: CryptoJS.enc.Utf8.parse(iv)
     });
     svcontent = JSON.parse(decrypted.toString(CryptoJS.enc.Utf8));
+    console.log(svcontent);
     svcontent["result"].forEach(quiz => {
       if (quiz.answer.length != 0) {
         questions.push({
@@ -6863,7 +6878,7 @@
           return parseInt(ele);
         });
 
-        for (let i = 0; i < score.length; i++) {
+        for (let i = 0; i < resScore.length; i++) {
           score[i] = score[i] + resScore[i];
         }
       }

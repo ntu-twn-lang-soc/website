@@ -6813,7 +6813,7 @@
     let role;
     console.log(score);
 
-    if (score[2] == 5) {
+    if (score[2] == 1) {
       role = questionsData.roles[4];
     } else {
       if (score[0] >= 6) {

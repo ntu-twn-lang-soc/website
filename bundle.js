@@ -6844,6 +6844,7 @@
     infos.forEach(element => {
       element.addEventListener("click", event => {
         console.log(event.target);
+        event.target.classList.toggle("toShow");
         event.target.nextElementSibling.classList.toggle("hide");
       });
     });
